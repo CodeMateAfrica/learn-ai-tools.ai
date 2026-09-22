@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn AI Tool — Discover Practical AI Tools for Everyday Work</title>
+  <meta name="description" content="Discover practical AI tools for writing, research, coding, design, video, productivity, business, learning, and everyday work with verified features and official links.">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Learn AI Tool — Discover Practical AI Tools for Everyday Work">
+  <meta property="og:description" content="Discover practical AI tools for writing, research, coding, design, productivity, business, and learning.">
+
+  <!-- Favicon / SVG Logo -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand-logo" aria-label="Learn AI Tool Home">
+        <span class="brand-icon">⚡</span>
+        <span class="brand-text">Learn AI Tool</span>
+      </a>
+
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-icon"></span>
+      </button>
+
+      <nav class="site-nav" id="siteNav">
+        <a href="#directory" class="nav-link">Tools Directory</a>
+        <a href="#about" class="nav-link">About</a>
+        <button class="btn btn-outline" id="suggestToolBtn" type="button">
+          <span>+ Suggest Tool</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-inner">
+        <div class="hero-badge">Verified Directory • Updated 2026</div>
+        <h1 class="hero-title">Discover the right AI tool for everyday work</h1>
+        <p class="hero-subtitle">
+          Explore practical AI tools for writing, research, coding, design, video, productivity, and learning with clear pricing and direct official links.
+        </p>
+
+        <!-- Search Input Bar -->
+        <div class="hero-search-wrapper">
+          <div class="search-input-group">
+            <span class="search-icon" aria-hidden="true">🔍</span>
+            <input
+              type="search"
+              id="searchInput"
+              class="search-input"
+              placeholder="Search by tool name, use case, or keyword (e.g., 'summarize PDF', 'coding', 'video')..."
+              aria-label="Search AI tools"
+              autocomplete="off"
+            >
+            <button class="search-clear-btn" id="searchClearBtn" aria-label="Clear search text" hidden>✕</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Directory Section -->
+    <section class="directory-section" id="directory">
+      <div class="container">
+
+        <!-- Controls Bar: Categories, Pricing, Sort, Reset -->
+        <div class="directory-controls">
+          <!-- Category Chips -->
+          <div class="category-filters-container">
+            <span class="filter-label">Categories:</span>
+            <div class="category-chips" id="categoryChips" role="tablist" aria-label="Tool Category Filters">
+              <!-- Dynamically populated chips -->
+            </div>
+          </div>
+
+          <!-- Secondary Filter Row -->
+          <div class="filter-bar-secondary">
+            <div class="filter-group">
+              <label for="pricingFilter" class="secondary-label">Pricing:</label>
+              <select id="pricingFilter" class="filter-select">
+                <option value="All">All Pricing Types</option>
+                <option value="Free">Free</option>
+                <option value="Freemium">Freemium</option>
+                <option value="Free Trial">Free Trial</option>
+                <option value="Paid">Paid</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label for="sortSelect" class="secondary-label">Sort by:</label>
+              <select id="sortSelect" class="filter-select">
+                <option value="recommended">Recommended</option>
+                <option value="alphabetical">Alphabetical (A-Z)</option>
+              </select>
+            </div>
+
+            <div class="active-summary">
+              <span id="resultsCount" class="results-count">Showing 0 tools</span>
+              <button id="resetFiltersBtn" class="reset-btn" hidden>Reset filters ↺</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tool Grid -->
+        <div class="tool-grid" id="toolGrid" aria-live="polite">
+          <!-- Dynamically populated cards -->
+        </div>
+
+        <!-- Empty Search State -->
+        <div class="empty-state" id="emptyState" hidden>
+          <div class="empty-icon">🔍</div>
+          <h3>No AI tools match your search</h3>
+          <p>Try adjusting your search keywords, switching categories, or clearing active filters.</p>
+          <button class="btn btn-primary" id="emptyResetBtn">Reset All Filters</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="about-card">
+          <h2>About Learn AI Tool</h2>
+          <p>
+            <strong>Learn AI Tool</strong> is a simple, lightweight directory created to help professionals, students, researchers, creators, and teams quickly discover practical AI software.
+          </p>
+          <p>
+            Rather than drowning in marketing hype or navigating complex directories, users can easily search for specific tasks (like <em>“editing videos”</em>, <em>“writing emails”</em>, or <em>“debugging code”</em>) and find direct, verified official links along with transparent pricing models.
+          </p>
+          <div class="about-meta-grid">
+            <div class="meta-item">
+              <span class="meta-icon">✓</span>
+              <span><strong>Verified Official Links</strong>: Direct links without unnecessary redirects.</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-icon">✓</span>
+              <span><strong>Transparent Pricing</strong>: Up-to-date labels for Free, Freemium, and Paid plans.</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-icon">✓</span>
+              <span><strong>Practical Focus</strong>: Curated tools chosen for real utility in day-to-day work.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Suggest Tool Modal Dialog -->
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <div class="modal-content" role="dialog" aria-labelledby="modalTitle" aria-modal="true">
+      <div class="modal-header">
+        <h3 id="modalTitle">Suggest an AI Tool</h3>
+        <button class="modal-close" id="modalCloseBtn" aria-label="Close modal">&times;</button>
+      </div>
+      <form id="suggestForm" class="suggest-form">
+        <div class="form-group">
+          <label for="suggestName">Tool Name <span class="required">*</span></label>
+          <input type="text" id="suggestName" required placeholder="e.g. Acme AI">
+        </div>
+        <div class="form-group">
+          <label for="suggestUrl">Official Website URL <span class="required">*</span></label>
+          <input type="url" id="suggestUrl" required placeholder="https://example.com">
+        </div>
+        <div class="form-group">
+          <label for="suggestCategory">Primary Category</label>
+          <select id="suggestCategory">
+            <option value="Writing & Content">Writing & Content</option>
+            <option value="Research & Knowledge">Research & Knowledge</option>
+            <option value="Coding & Development">Coding & Development</option>
+            <option value="Design & Images">Design & Images</option>
+            <option value="Video & Audio">Video & Audio</option>
+            <option value="Productivity & Notes">Productivity & Notes</option>
+            <option value="Meetings & Transcription">Meetings & Transcription</option>
+            <option value="Marketing & Sales">Marketing & Sales</option>
+            <option value="Education & Learning">Education & Learning</option>
+            <option value="Presentations">Presentations</option>
+            <option value="Automation & Workflows">Automation & Workflows</option>
+            <option value="Data & Analytics">Data & Analytics</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="suggestDescription">What does this tool do?</label>
+          <textarea id="suggestDescription" rows="3" placeholder="Briefly describe its main features and real-world use cases..."></textarea>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn btn-secondary" id="modalCancelBtn">Cancel</button>
+          <button type="submit" class="btn btn-primary">Submit Suggestion</button>
+        </div>
+        <div class="form-success-msg" id="formSuccessMsg" hidden>
+          ✓ Thank you! Your suggestion has been submitted for review.
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-icon">⚡</span>
+        <span class="brand-name">Learn AI Tool</span>
+        <p class="footer-desc">Your practical directory for discovering useful AI tools for work, study, and creativity.</p>
+      </div>
+
+      <div class="footer-disclaimer">
+        <p><strong>Disclaimer:</strong> Tool features, availability, and pricing change frequently. Always consult the tool's official website for the most accurate current information.</p>
+        <p class="copyright">&copy; 2026 Learn AI Tool. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>
